@@ -74,10 +74,10 @@ public class GrafikTE20 extends Canvas {
 
         if (marioX + marioVX < width+4*marioimg.getWidth() && marioX + marioVX > 0)
             marioX += marioVX;
-        if (marioY + marioVY < height && marioY + marioVY > 250-4*marioimg.getHeight())
+        //if (marioY + marioVY < height && marioY + marioVY > 250-4*marioimg.getHeight())
             marioY += marioVY;
 
-        cloudX += 3;
+        cloudX += 2;
         if (cloudX > width){
             cloudX = 0;
         }
@@ -103,7 +103,7 @@ public class GrafikTE20 extends Canvas {
         drawTree(g, treeX+60,treeY);
         drawHouse(g, houseX, houseY);
         drawCloud(g, cloudX, cloudY);
-
+        g.drawImage(marioimg, marioX, marioY, 4*marioimg.getWidth(), 4*marioimg.getHeight(),null);
     }
 
     private void drawCloud(Graphics g, int x, int y) {
